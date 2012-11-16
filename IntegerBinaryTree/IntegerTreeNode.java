@@ -43,11 +43,19 @@ public class IntegerTreeNode {
 		}
 	}
 	
-	public int getMin() {
-		
+	public int getMax() {
+		if(right == null) {
+			return this.value;
+		} else {
+			return right.getMax();
+		}
 	}
 	
-	public int getMax() {
-		
+	public int getMin() {
+		if(left == null) {
+			return this.value;
+		} else {
+			return left.getMin();
+		}
 	}
 }
