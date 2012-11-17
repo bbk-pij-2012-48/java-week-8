@@ -79,7 +79,7 @@ public class IntegerTreeNode {
 		System.out.print("]");
 	}
 	
-	public String toString() {
+	public String toStringLong() {
 		String dst = "[" + value;
 		if(left != null) {
 			dst += " L" + left.toString();
@@ -96,5 +96,38 @@ public class IntegerTreeNode {
 		dst += "]";
 		
 		return dst;
-	}		
+	}
+	
+	public String toString() {
+		String dst = "[" + value;
+		if(left != null) {
+			dst += " " + left.toString();
+		}
+		
+		if(right != null) {
+			dst += " " + right.toString();
+		} 
+		
+		dst += "]";
+		
+		return dst;
+	}
+	
+	public int depth() {
+		int count = 0;
+		
+		if (left != null && right != null) {
+			count++;
+			count += Math.max(left.depth(), right.depth());
+		} else if (left != null) {
+			count++;
+			count += left.depth();
+		} else if (right != null) {
+			count++;
+			count += right.depth();
+		}
+		
+		return count;
+	}
+			
 }
