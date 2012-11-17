@@ -139,5 +139,9 @@ public class IntegerTreeNode {
 			return right.find(n);
 		}
 	}
+	
+	public void remove(int n) {
+		// what do I do if the elt to remove is the top one? 
+	}
 			
 }
