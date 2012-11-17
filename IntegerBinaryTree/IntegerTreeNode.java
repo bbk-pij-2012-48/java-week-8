@@ -129,5 +129,15 @@ public class IntegerTreeNode {
 		
 		return count;
 	}
+	
+	private IntegerTreeNode find(int n) {
+		if (n == value) {
+			return this;
+		} else if (n < value) {
+			return left.find(n);
+		} else {
+			return right.find(n);
+		}
+	}
 			
 }
