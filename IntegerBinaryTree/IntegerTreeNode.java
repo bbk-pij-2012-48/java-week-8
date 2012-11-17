@@ -58,4 +58,43 @@ public class IntegerTreeNode {
 			return left.getMin();
 		}
 	}
+	
+	public void prettyPrint() {
+		System.out.print("[" + value);
+		
+		if(left != null) {
+			System.out.print(" L");
+			left.prettyPrint();
+		} else {
+			System.out.print(" L[]");
+		}
+		
+		if(right != null) {
+			System.out.print(" R");
+			right.prettyPrint();
+		} else {
+			System.out.print(" R[]");
+		}
+		
+		System.out.print("]");
+	}
+	
+	public String toString() {
+		String dst = "[" + value;
+		if(left != null) {
+			dst += " L" + left.toString();
+		} else {
+			dst += " L[]";
+		}
+		
+		if(right != null) {
+			dst += " R" + right.toString();
+		} else {
+			dst += " R[]";
+		}
+		
+		dst += "]";
+		
+		return dst;
+	}		
 }
