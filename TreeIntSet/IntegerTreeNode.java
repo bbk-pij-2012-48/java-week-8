@@ -129,17 +129,15 @@ public class IntegerTreeNode {
 		return dst;
 	}
 	
-	public String toString() {
-		String dst = "[" + value;
+	public String toString() {		// just prints list separated by commas
+		String dst = "" + value;
 		if(left != null) {
-			dst += " " + left.toString();
+			dst += ", " + left.toString();
 		}
 		
 		if(right != null) {
-			dst += " " + right.toString();
+			dst += ", " + right.toString();
 		} 
-		
-		dst += "]";
 		
 		return dst;
 	}
