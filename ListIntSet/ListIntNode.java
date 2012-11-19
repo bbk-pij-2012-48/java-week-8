@@ -57,7 +57,6 @@ public class ListIntNode {
 	
 	public String toString() {
 		String dst = this.toStringComma();
-		//System.out.println(dst); //*************************************************************************************
 		return dst.substring(0,dst.length()-1); // removes final comma for neatness
 	}		
 }
